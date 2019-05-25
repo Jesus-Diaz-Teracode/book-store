@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	address = "localhost:50051"
+	address = "book-service:50051"
 )
 
 func setupEngine(bc svc.BookClient) *gin.Engine {

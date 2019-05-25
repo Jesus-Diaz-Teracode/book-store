@@ -1,9 +1,16 @@
 version: "3"
 services:
-  book_storage:
-    hostname: book-storage
-    container_name: book-storage
+  book_store:
+    hostname: book-store
+    container_name: book-store
     build:
       context: .
     ports:
       - "8080:8080"
+    networks:
+      - default
+
+networks:
+  default:
+    external:
+      name: books
